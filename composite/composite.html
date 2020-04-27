@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>composite</title>
+  <link rel="stylesheet" href="https://stackedit.io/style.css" />
+</head>
+
+<body class="stackedit">
+  <div class="stackedit__html"><h1 id="design-patterns">Design Patterns</h1>
+<h1 id="composite">Composite</h1>
+<p>Um padrão estrutural que permite compor objetos em forma de árvore e então trabalhar com essas estruturas como se fossem objetos individuais. Entretanto esse padrão só faz sentido se o modelo da aplicação for representado em forma de árvore.<br>
+<img src="https://s2.glbimg.com/s1WWie4OG2YDnSEesAOvd2JlMyI=/695x0/s.glbimg.com/po/tt2/f/original/2014/07/15/imagem16.png" alt="O que são e como trabalhar com camadas no Adobe Photoshop | Dicas ..."><br>
+Um exemplo disso é a função de camadas do Adobe Photoshop.</p>
+<h2 id="funcionamento">Funcionamento</h2>
+<p>A ideia principal é trabalhar com hierarquias através de uma interface comum, ou seja, uma classe complexa ou apenas um objeto simples são tratados pela mesma interface.</p>
+<h2 id="estrutura">Estrutura</h2>
+<h4 id="interface">1. Interface</h4>
+<p>A interface do componente descreve operações tanto para elementos simples  como para elementos complexos da árvore.</p>
+<h4 id="folha">2. Folha</h4>
+<p>Componente de uma árvore que não tem sub-elementos, responsáveis pela maior parte do trabalho.</p>
+<h4 id="contêiner-ou-composite">3. Contêiner ou Composite</h4>
+<p>Elemento que possui sub-elementos, sendo esses folhas ou outros contêineres. Assim atuando como um interface, ao receber um pedido o mesmo envia o trabalho para um de seus sub-elementos e apenas retorna o resultado final.</p>
+<h4 id="cliente">4. Cliente</h4>
+<p>Responsável por trabalhar com todos os elementos através da interface.<br>
+<img src="https://refactoring.guru/images/patterns/diagrams/composite/structure-pt-br.png" alt="Estrutura do padrão de projeto Composite"></p>
+<h2 id="vantagens">Vantagens</h2>
+<ol>
+<li>É possível trabalhar com estruturas de árvore mais complexas de forma conveniente usando polimorfismo e recursão a seu favor.</li>
+<li>É possível introduzir novas funcionalidades ao código sem quebrar as já existentes .</li>
+</ol>
+<h2 id="desvantagens">Desvantagens</h2>
+<ol>
+<li>A interface principal do componente precisa ser muito genérica para interagir com diferentes funcionalidades.</li>
+</ol>
+</div>
+</body>
+
+</html>
