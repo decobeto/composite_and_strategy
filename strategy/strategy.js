@@ -14,7 +14,7 @@ let friendlyGreetingStrategy = function() {
   console.log("E ai brother belezea?") 
 }
 
-var boredGreetingStrategy = function() {
+let boredGreetingStrategy = function() {
   console.log("Opa bão")
 }
 
