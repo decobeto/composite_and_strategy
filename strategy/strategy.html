@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>strategy</title>
+  <link rel="stylesheet" href="https://stackedit.io/style.css" />
+</head>
+
+<body class="stackedit">
+  <div class="stackedit__html"><h1 id="design-patterns">Design Patterns</h1>
+<h1 id="strategy">Strategy</h1>
+<p>É um padrão de projeto comportamental que tem por ideia a definição de uma família de algoritmos, sendo esses em classes separadas e com seus objetos funcionando de forma intercambiável.</p>
+<h2 id="funcionamento">Funcionamento</h2>
+<p>A ideia principal do strategy é separar uma classe grande em classes menores, deixando a principal apenas como uma referência a outras menores. Cada classe menor é chamada de estratégia ou strategy.</p>
+<h2 id="estrutura">Estrutura</h2>
+<h4 id="contexto">1. Contexto</h4>
+<p>O contexto mantém uma referência para uma das estratégias concretas e se comunica com esse objeto através da interface da estratégia.</p>
+<h4 id="estratégia">2. Estratégia</h4>
+<p>A interface estratégia é comum a todas as estratégias concretas. Ela declara um método que o contexto use para executar uma estratégia.</p>
+<h4 id="estratégia-concreta">3. Estratégia Concreta</h4>
+<p>Implementam diferentes versões de um algoritmo utilizado pelo contexto.</p>
+<h4 id="contexto-e-estratégia">4. Contexto e Estratégia</h4>
+<p>O contexto chama o método de execução no objeto estratégia toda vez que ele precisa rodar algum algoritmo. O contexto nunca sabe qual estratégia está rodando ou qual algoritmo está executando.</p>
+<h4 id="cliente">5. Cliente</h4>
+<p>O cliente cria um objeto estratégia e passa ele para o contexto. O cliente emite um setter que permite o cliente mudar a estratégia associada com contexto durante a execução.<br>
+<img src="https://refactoring.guru/images/patterns/diagrams/strategy/structure.png" alt="Estrutura do padrão de projeto Strategy"></p>
+<h2 id="vantagens">Vantagens</h2>
+<ol>
+<li>É possível alterar algoritmos dentro de um objeto durante a execução</li>
+<li>É possível substituir a herança por composição</li>
+<li>Princípio aberto/fechado, é possível introduzir novas estratégias sem mudar o contexto.</li>
+</ol>
+<h2 id="desvantagens">Desvantagens</h2>
+<ol>
+<li>Se for utilizados apenas um par de algoritmos, não existe motivo para deixar o programa complicado com novas classes e interfaces.</li>
+<li>Os clientes precisam saber qual as estratégias para serem capazes de selecionar a adequada.</li>
+<li>Muitas linguagens de programação tem suporte do tipo funcional que permite utilizar algoritmos dentro de funções anônimas, fazendo com que diversas versões de um mesmo algoritmo sejam implementadas . Removendo a necessidade de classes e interfaces.</li>
+</ol>
+<ul>
+<li>Esse padrão é levemente baseado em Composição ou composite o que pode resumir a delegar o trabalho a outros objetos.</li>
+</ul>
+</div>
+</body>
+
+</html>
